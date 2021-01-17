@@ -3,6 +3,7 @@ package interfaces.implementaciones;
 import java.util.ArrayList;
 import java.util.List;
 
+import enums.GeneroProducto;
 import interfaces.IPoblar;
 import modelos.Almacen;
 import modelos.Comprador;
@@ -34,23 +35,23 @@ public class PoblarImple implements IPoblar {
 	@Override
 	public List<Producto> crearProducto() {
 		List<Producto> productos = new ArrayList<Producto>();
-		Producto sandalias1 = new Producto(0001, "Azul", 37, 'f', "Sandalias", 2500);
+		Producto sandalias1 = new Producto(0001, "Azul", 37, GeneroProducto.F , "Sandalias", 2500);
 		productos.add(sandalias1);
-		Producto zapatos1 = new Producto(1001, "Beige", 38, 'f', "Zapatos", 3000);
+		Producto zapatos1 = new Producto(1001, "Beige", 38, GeneroProducto.F, "Zapatos", 3000);
 		productos.add(zapatos1);
-		Producto zapatillas1 = new Producto(2001, "Negro", 39, 'f', "Zapatillas", 3500);
+		Producto zapatillas1 = new Producto(2001, "Negro", 39, GeneroProducto.F, "Zapatillas", 3500);
 		productos.add(zapatillas1);
-		Producto sandalias2 = new Producto(0002, "Rojo", 38, 'f', "Sandalias", 4000);
+		Producto sandalias2 = new Producto(0002, "Rojo", 38, GeneroProducto.F, "Sandalias", 4000);
 		productos.add(sandalias2);
-		Producto zapatos2 = new Producto(1002, "Azul", 39, 'm', "Zapatos", 4500);
+		Producto zapatos2 = new Producto(1002, "Azul", 39, GeneroProducto.M, "Zapatos", 4500);
 		productos.add(zapatos2);
-		Producto zapatillas2 = new Producto(2002, "Blanco", 39, 'f', "Zapatillas", 5000);
+		Producto zapatillas2 = new Producto(2002, "Blanco", 39, GeneroProducto.F, "Zapatillas", 5000);
 		productos.add(zapatillas2);
-		Producto zapatillas3 = new Producto(2003, "Rojo", 39, 'f', "Zapatillas", 5000);
+		Producto zapatillas3 = new Producto(2003, "Rojo", 39, GeneroProducto.F, "Zapatillas", 5000);
 		productos.add(zapatillas3);
-		Producto sandalias3 = new Producto(1003, "Amarillo", 38, 'f', "Sandalias", 5000);
+		Producto sandalias3 = new Producto(1003, "Amarillo", 38, GeneroProducto.F, "Sandalias", 5000);
 		productos.add(sandalias3);
-		Producto sandalias4 = new Producto(1004, "Dorado", 38, 'f', "Sandalias", 6000);
+		Producto sandalias4 = new Producto(1004, "Dorado", 38, GeneroProducto.F, "Sandalias", 6000);
 		productos.add(sandalias4);
 		return productos;
 	}

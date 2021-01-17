@@ -3,6 +3,7 @@ package ejecutores;
 import java.util.ArrayList;
 import java.util.List;
 
+import enums.GeneroProducto;
 import interfaces.IPoblar;
 import interfaces.IBuscar;
 import interfaces.IDescuento;
@@ -25,7 +26,7 @@ public class Main {
 		List<Producto> zapatosPorTalle = buscar.buscarPorTalle(productos, 37);
 		System.out.println(zapatosPorTalle);
 		
-		List<Producto> zapatosPorGenero = buscar.buscarPorGenero(productos, 'f');
+		List<Producto> zapatosPorGenero = buscar.buscarPorGenero(productos, GeneroProducto.F);
 		System.out.println(zapatosPorGenero);
 		
 		List<Producto> zapatosPorTipo = buscar.buscarPorTipo(productos, "Zapatillas");
@@ -33,7 +34,7 @@ public class Main {
 		
 		List<Producto> productosComprados = new ArrayList<Producto>();
 		
-		List<Producto> busquedaCombinada = buscar.buscarGeneroTipoTalle(productos, 'f', "Zapatillas", 39);
+		List<Producto> busquedaCombinada = buscar.buscarGeneroTipoTalle(productos, GeneroProducto.F, "Zapatillas", 39);
 		System.out.println("Los productos disponibles son \n" + busquedaCombinada);
 		productosComprados.add(busquedaCombinada.get(0));
     	productosComprados.add(busquedaCombinada.get(1));

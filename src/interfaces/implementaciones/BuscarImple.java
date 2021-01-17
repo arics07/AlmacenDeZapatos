@@ -3,6 +3,7 @@ package interfaces.implementaciones;
 import java.util.ArrayList;
 import java.util.List;
 
+import enums.GeneroProducto;
 import interfaces.IBuscar;
 import modelos.Producto;
 
@@ -31,10 +32,10 @@ public class BuscarImple implements IBuscar {
 	}
 
 	@Override
-	public List<Producto> buscarPorGenero(List<Producto> productos, char genero) {
+	public List<Producto> buscarPorGenero(List<Producto> productos, GeneroProducto genero) {
 		List<Producto> zapatosEncontrados = new ArrayList<Producto>();
 		for (Producto producto: productos) {
-			if (Character.toUpperCase(producto.getGenero()) == Character.toUpperCase(genero)) {
+			if (producto.getGenero() == genero) {
 				zapatosEncontrados.add(producto);
 			}
 		}
@@ -53,7 +54,7 @@ public class BuscarImple implements IBuscar {
 	}
 
 	@Override
-	public List<Producto> buscarGeneroTipoTalle(List<Producto> productos, char genero, String tipo, int talle) {
+	public List<Producto> buscarGeneroTipoTalle(List<Producto> productos, GeneroProducto genero, String tipo, int talle) {
 		List<Producto> busquedaCombinada = new ArrayList<Producto>();
 		for (Producto producto: productos) {
 			if (producto.getGenero()==genero && producto.getTipo().toUpperCase().equals(tipo.toUpperCase()) && producto.getTalla()==talle) {
