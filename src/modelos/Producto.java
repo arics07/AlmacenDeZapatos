@@ -1,15 +1,17 @@
 package modelos;
 
+import enums.GeneroProducto;
+
 public class Producto {
 
 	private int idZapato;
 	private String color;
 	private int talla;
-	private char genero;
+	private GeneroProducto genero;
 	private String tipo;
 	private int precio;
 	
-	public Producto(int idZapato, String color, int talla, char genero, String tipo, int precio) {
+	public Producto(int idZapato, String color, int talla, GeneroProducto genero, String tipo, int precio) {
 		super();
 		this.idZapato = idZapato;
 		this.color = color;
@@ -42,10 +44,10 @@ public class Producto {
 	public void setTalla(int talla) {
 		this.talla = talla;
 	}
-	public char getGenero() {
+	public GeneroProducto getGenero() {
 		return genero;
 	}
-	public void setGenero(char genero) {
+	public void setGenero(GeneroProducto genero) {
 		this.genero = genero;
 	}
 	public String getTipo() {
